@@ -38,7 +38,6 @@ const HeroSlider = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-      <Banner />
     </>
   );
 };

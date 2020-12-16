@@ -1,12 +1,13 @@
+import { useState, useContext, useEffect } from 'react'
 import {FaBell,FaHeart} from 'react-icons/fa'
 import './UserMenu.css'
 import {Link} from 'react-router-dom'
 import Dropdown from './../Dropdown/Dropdown'
-import { useState, useContext } from 'react'
 import authContext from '../../context/auth/authContext'
 
 const UserMenu = ({user, dayHour}) =>
 {
+    const [favourites, setFavourites] = useState([{ id: 'dsadssdas', name: 'Hola mundo'}]);
     const {logout} =useContext(authContext)
     let color="";
     let tema="";
@@ -55,7 +56,15 @@ const UserMenu = ({user, dayHour}) =>
                     <FaHeart className={`usermenu-link-${tema} ${color}`} size={25}/>
                 </div>
                 <div className={`initials-content-${tema} big-container text-light`}>
-                    There isn't favourites courses
+                    {
+                        favourites.length < 0 
+                        ? (<p>There aren't favourites</p>)
+                        : (favourites.map((favourite, index) => (
+                            <div key={index}>
+                                
+                            </div>
+                        )))
+                    }
                 </div>
             </div>
         </div>
