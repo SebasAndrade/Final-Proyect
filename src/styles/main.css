@@ -7,3 +7,18 @@
   width: 100%;
   overflow: hidden;
 }
+
+.searchBar {
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 430px) {
+  .searchBar {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .searchBar {
+    margin-top: 33px;
+  }
+}
