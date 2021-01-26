@@ -77,7 +77,8 @@ const CourseDetail = ({ match }) => {
                     <p> <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiOutlineStar /> (3.773) qualifications from 12.800 students</p>
                     <Button className="detailBtn">Share</Button>
                 </div>
-                <div className="cardDetail row">
+            </div>
+                <div className="cardDetail ">
                     <Card style={{ width: '18rem', heigth: '28rem' }}>
                         <div className="">
                             <Card.Img className="cardImage" src={image} />
@@ -87,7 +88,7 @@ const CourseDetail = ({ match }) => {
                             </Card.Body>
                         </div>
                         <Card.Footer className="benefitsCourse ">
-                            <p>Este curso Incluye:</p>
+                            <p>This Course Includes:</p>
                             <ul style={{ listStyle: 'none' }}>
                                 <li> <AiOutlineYoutube /> 28 hours off on demand video</li>
                                 <li> <AiOutlineCloudDownload /> 24 downloadable resources</li>
@@ -98,7 +99,8 @@ const CourseDetail = ({ match }) => {
                         </Card.Footer>
                     </Card>
                 </div>
-            </div>
+                
+
             <div className="card-twoDetail">
                 <Card>
                     <Card.Body>
@@ -128,29 +130,11 @@ const CourseDetail = ({ match }) => {
                     comment.length === 0 ? 'There are not available courses' : (
                         comment.map((commentsForm, index) => (
                             <Comments key={index} commentsForm={commentsForm} />
-                        ))
-                    )
-                }
+                            ))
+                            )
+                        }
             </div>
-            <div className='commentsForm pl-3 pr-3 pb-3 pt-3 mb-3'>
-                <h2 style={{ textAlign: 'center' }}>Add a comment</h2>
-                <Form>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" required />
-                        <Form.Text className="text-muted" required>
-                            Enter your username or email
-                        </Form.Text>
-                    </Form.Group>
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Commentary</Form.Label>
-                        <Form.Control as="textarea" placeholder="Text" />
-                    </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Add comment
-                    </Button>
-                </Form>
-            </div>
+                        
         </div>
     )
 }
