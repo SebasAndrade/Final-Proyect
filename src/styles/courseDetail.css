@@ -20,16 +20,15 @@
 }
 
 .cardDetail {
-    position: fixed; 
-    display: block;
+   position: absolute;
     background: transparent;
-    width: 40%;
+    width: auto;
     height: auto;
-    transform: translateX(195%) translateY(-30%); 
+    transform: translateX(380%) translateY(-30%); 
 }
 
 .card-twoDetail{
-    margin-top: 50px;
+    margin-top: 0px;
     width: 70%;
     margin-left: 30px;
 }
@@ -41,6 +40,7 @@
 .opinionCards {
     margin-top: 20px;
     margin-left: 30px;
+    margin-bottom: 30px;
     width: 95%;
 }
 .detailBtn {
@@ -64,13 +64,7 @@
     background: #040F0F;
     color: #FBF9FF;
 }
-.commentsForm {
-    margin-top: 20px ;
-    border-radius: 1em;
-    border: 1px solid black;
-    width: 74%;
-    margin-left: 30px;
-}
+
 
 @media screen and (max-width: 768px) {
     .bodyDetail {

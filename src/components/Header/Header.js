@@ -78,7 +78,7 @@ const Header = () => {
                     user &&
                     (
                         <Row >
-                            <Col className="d-flex justify-content-between">
+                            <Col className="d-flex justify-content-between searchBar">
                                 <SearchBar/>
                             </Col>
                         </Row>
