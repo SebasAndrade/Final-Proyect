@@ -9,7 +9,7 @@ const LandingPage = () => {
         <Container fluid className="main-content cover-background-landing">
             <Row>
                 <Container>
-                    <Row >
+                    <Row className='landing-text' >
                         <Col sm={12} md={6}>
                             <Container className="p-3 mt-5">
                                 <div>

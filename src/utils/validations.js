@@ -2,9 +2,9 @@ export function validationRegister(values) {
     let errors = {};
     
     if (!values.name) {
-        errors.name = 'First Name required';
-    } else if (values.name.length < 3 ) {
-        errors.name = 'First Name needs to be 3 characters or more';
+        errors.name = 'Name required';
+    } else if (values.name.length < 3 || values.name.length>19) {
+        errors.name = 'Name must be between 3 to 20 characters';
     }
     if (!values.email) {
         errors.email = 'Email required';
@@ -13,8 +13,8 @@ export function validationRegister(values) {
     }
     if (!values.password) {
         errors.password = 'Password is required';
-    } else if (values.password.length < 6 && values.password.length > 16) {
-        errors.password = 'Password must be between 6 to 16 characters';
+    } else if (values.password.length < 8 || values.password.length > 16) {
+        errors.password = 'Password must be between 8 to 16 characters';
     }
     if (!values.password2) {
         errors.password2 = 'Password is required';
@@ -33,8 +33,8 @@ export const validationLogin = (values) => {
     }
     if (!values.password) {
         errors.password = 'Password is required';
-    } else if (values.password.length < 6 && values.password.length > 16) {
-        errors.password = 'Password must be between 6 to 16 characters';
+    } else if (values.password.length < 8 || values.password.length > 16) {
+        errors.password = 'Password must be between 8 to 16 characters';
     }
     return errors;
 }

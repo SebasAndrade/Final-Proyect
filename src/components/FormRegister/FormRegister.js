@@ -25,7 +25,6 @@ const FormRegister = () => {
     async function submitForm()  {
         await register(values);
     }
-
     return(
         <>
             <Form onSubmit={handleSubmit} noValidate className="mb-3">
@@ -38,7 +37,7 @@ const FormRegister = () => {
                     value={values.name}
                     onChange={handleChange}
                     />
-                {errors.username && <h6 className="mt-1 text-danger">{errors.username}</h6>}
+                {errors.name && <h6 className="mt-1 text-danger">{errors.name}</h6>}
                 <Form.Group controlId="formBasicEmail">
                     <Form.Control
                         className="mt-3"

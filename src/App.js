@@ -10,10 +10,12 @@ import LandingPage from "./pages/LandingPage";
 import Home from "./pages/Home";
 import Favourite from "./pages/Favourite";
 import RecoverPasswordPage from "./pages/RecoverPasswordPage";
+import ChangePasswordPage from "./pages/ChangePasswordPage";
 import CourseDetail from './pages/CourseDetail.js';
 import Error404 from './pages/Error404'
 import AboutUs from './pages/AboutUs'
 //Routes
+import PublicRoute from "./routes/PublicRoute";
 import PrivateRoute from "./routes/PrivateRoute";
 import AdminRoute from './routes/AdminRoute';
 //Context
@@ -41,9 +43,10 @@ function App() {
             <FunctionModalsProvider>
               <Header dayHour={dayHour} />
                 <Switch>
-                  <Route exact path="/" component={LandingPage} />
+                  <PublicRoute exact path="/" component={LandingPage} />
                   <PrivateRoute exact path="/subscriptions" component={Subscriptions} />
                   <Route exact path="/recoverpassword" component={RecoverPasswordPage} />
+                  <Route exact path="/changepassword/:tokenPass" component={ChangePasswordPage} />
                   <Route exact path="/Aboutus" component ={AboutUs}/>
                   <AdminRoute exact path="/adminpage" component={AdminPage} />
                   <AdminRoute exact path="/courses/editar/:idCourse" component={EditCourse} />
